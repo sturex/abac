@@ -1,0 +1,18 @@
+type Query {
+    getAllPosts: [Post]!
+}
+
+type Mutation {
+    deletePost (postId: Int!): Post!
+    createPost (content: String!): Post!
+}
+
+type Post {
+    id: Int!
+    author: User!
+    content: String
+}
+
+type User {
+    username: String!
+}
